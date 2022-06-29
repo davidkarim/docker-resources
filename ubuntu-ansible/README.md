@@ -4,6 +4,9 @@ This image can be used to test Ansible scripts locally. It launches Ubuntu with 
 ## How to run
 
 ```bash
+# Run the copy keys shell script
+./copy_keys.sh
+
 # Build image
 docker image build . -t ubuntu-ansible
 
@@ -18,4 +21,3 @@ ssh root@localhost # uses ssh keys
 ssh ubuntu@localhost # uses configured password
 ```
 
-TODO: Add key within Dockerfile
