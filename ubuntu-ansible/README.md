@@ -17,7 +17,7 @@ docker container run -d --rm --name ansible-test -p 22:22 ubuntu-ansible
 docker container exec -it ansible-test /bin/bash
 
 # SSH into container
-ssh root@localhost # uses ssh keys
-ssh ubuntu@localhost # uses configured password
+ssh -o "StrictHostKeyChecking=no" root@localhost # uses ssh keys
+ssh -o "StrictHostKeyChecking=no" ubuntu@localhost # uses configured password
 ```
 
