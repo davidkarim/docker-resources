@@ -1,0 +1,7 @@
+{
+    "name": "server public ip",
+    "script_path": "curl icanhazip.com",
+    "working_directory": "/",
+    "description": "Get public ip address of this server",
+    "parameters": []
+  }

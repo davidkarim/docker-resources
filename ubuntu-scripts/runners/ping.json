@@ -1,0 +1,15 @@
+{
+  "name": "ping",
+  "script_path": "ping",
+  "working_directory": "/",
+  "description": "Ping networking tool",
+  "parameters": [
+    {
+      "name": "host",
+      "required": true,
+      "type": "text",
+      "default": "google.com",
+      "description": "host name or ip address"
+    }
+  ]
+}
