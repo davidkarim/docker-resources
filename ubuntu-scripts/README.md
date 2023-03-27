@@ -25,3 +25,15 @@ ssh -o "StrictHostKeyChecking=no" ubuntu@localhost # uses configured password
 python3 launcher.py
 # Go to: http://localhost:8000/index.html#/
 ```
+## Deployment on Synology
+The files were hand copied to Synology under /volume1/homes/dkarim/ubuntu-scripts.
+
+```bash
+# Build the image from Synology CLI:
+docker image build . -f Dockerfile -t ubuntu-scripts
+# Then stop and delete container from Synology Docker client
+# and recreate it.
+# The mappings used were ports 2223:22 and 8000:5000
+# The Synology reverse proxy has ability to add a custom header for web sockets. This
+# was necessary to make the wss requests the app does to work.
+```
