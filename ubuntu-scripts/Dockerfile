@@ -4,12 +4,21 @@ RUN apt-get update && apt install git gpg vim openssh-server unzip sudo -y
 RUN apt-get install python3-venv python3-pip -y
 # Install networking tools
 RUN apt-get install iputils-ping curl dnsutils nmap tcpdump netcat iproute2 net-tools -y
+RUN apt-get traceroute links -y
+# Install speedtest
+RUN curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+RUN apt-get install speedtest -y
+
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 ubuntu
 RUN echo 'ubuntu:ubuntu' | chpasswd
 RUN mkdir /root/.ssh
 COPY id_rsa.pub /root/.ssh/authorized_keys
 COPY id_rsa /root/.ssh/id_rsa
 RUN service ssh start
+
+# Install DNS Leak test
+COPY dnsleaktest.sh /root/dnsleaktest.sh
+RUN chmod +x /root/dnsleaktest.sh
 
 RUN mkdir /opt/script-server
 WORKDIR /opt/script-server

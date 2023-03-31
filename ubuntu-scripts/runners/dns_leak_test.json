@@ -1,0 +1,7 @@
+{
+    "name": "dns leak test",
+    "script_path": "./dnsleaktest.sh",
+    "working_directory": "/root",
+    "description": "Check the DNS server being used",
+    "parameters": []
+}

@@ -1,0 +1,12 @@
+{
+  "name": "links browser",
+  "script_path": "links -dump",
+  "parameters": [
+    {
+      "name": "website domain",
+      "required": true,
+      "default": "news.google.com",
+      "description": "Domain of website to display"
+    }
+  ]
+}

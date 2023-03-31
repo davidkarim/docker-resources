@@ -1,0 +1,33 @@
+{
+  "name": "dig",
+  "script_path": "dig",
+  "working_directory": "/",
+  "description": "Domain Information Groper - Tool for DNS information",
+  "parameters": [
+    {
+      "name": "server",
+      "required": true,
+      "type": "text",
+      "default": "home.dkarim.com",
+      "description": "Hostname or IP address that the query is directed to."
+    },
+    {
+      "name": "name-server",
+      "type": "text",
+      "default": "@8.8.8.8",
+      "description": "The domain name server to query"
+    },
+    {
+      "name": "type",
+      "required": false,
+      "type": "text",
+      "no_value": false,
+      "default": [
+        "ALL"
+      ],
+      "constant": false,
+      "description": "Type of DNS record to retrieve",
+      "multiselect_argument_type": "single_argument"
+    }
+  ]
+}

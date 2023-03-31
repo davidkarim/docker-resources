@@ -1,0 +1,13 @@
+{
+  "name": "nmap scan certificate",
+  "script_path": "nmap -p 443 --script ssl-cert",
+  "parameters": [
+    {
+      "name": "hostname",
+      "required": true,
+      "type": "text",
+      "default": "home.dkarim.com",
+      "description": "Hostname of target to get certificate for"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "reverse dig",
+  "script_path": "dig +noall +answer -x",
+  "working_directory": "/",
+  "description": "dig command to do reverse dns lookup (+noall +answer -x)",
+  "parameters": [
+    {
+      "name": "IP address",
+      "required": true,
+      "type": "text",
+      "description": "any IP address"
+    }
+  ]
+}

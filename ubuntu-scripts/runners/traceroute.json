@@ -1,0 +1,15 @@
+{
+  "name": "traceroute",
+  "script_path": "traceroute",
+  "working_directory": "/",
+  "description": "traceroute utility",
+  "parameters": [
+    {
+      "name": "host",
+      "required": true,
+      "type": "text",
+      "default": "www.dkarim.com",
+      "description": "Host name or IP address of target"
+    }
+  ]
+}
