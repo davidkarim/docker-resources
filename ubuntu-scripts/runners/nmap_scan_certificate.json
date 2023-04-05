@@ -5,9 +5,14 @@
     {
       "name": "hostname",
       "required": true,
-      "type": "text",
-      "default": "home.dkarim.com",
-      "description": "Hostname of target to get certificate for"
+      "type": "list",
+      "description": "Hostname of target to get certificate for",
+      "values": [
+	      "home.dkarim.com",
+	      "palmettodentist.com",
+	      "larysasmith.com",
+	      "dkarim.com"
+	]
     }
   ]
 }

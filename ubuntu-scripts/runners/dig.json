@@ -20,14 +20,20 @@
     {
       "name": "type",
       "required": false,
-      "type": "text",
+      "type": "list",
       "no_value": false,
-      "default": [
-        "ALL"
-      ],
       "constant": false,
       "description": "Type of DNS record to retrieve",
-      "multiselect_argument_type": "single_argument"
+      "values": [
+        "ANY",
+        "CNAME",
+        "TXT",
+        "A",
+        "NS",
+        "MX",
+        "PTR",
+        "SOA"
+      ]
     }
   ]
 }
