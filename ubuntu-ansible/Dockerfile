@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt update && apt install git gpg vim openssh-server sudo -y
+RUN apt update && apt install curl git gpg vim openssh-server sudo -y
 RUN apt install python3-venv python3-pip -y
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 ubuntu
 RUN echo 'ubuntu:ubuntu' | chpasswd
